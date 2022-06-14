@@ -9,13 +9,17 @@ import { Store } from './components/Store';
 import { Stock } from './components/Stock';
 import { Warning } from './components/Warning';
 import { Form } from './components/Form';
+import { Garage } from './components/Garage';
+import { Welcome } from './components/Welcome';
+import { Car } from './components/Car';
+import { Menu } from './components/Menu';
 
 const comment = {
   date: new Date(),
-  text: 'Welcome to react component',
+  text: 'I hope you enjoy my restaurant!',
   author: {
-    name: 'vanttn',
-    avatarUrl: 'images/logo.jpg',
+    name: 'alberto',
+    avatarUrl: 'images/alberto.png',
   },
 };
 
@@ -37,11 +41,11 @@ function App() {
       {/* <h1>Hello, {formatName(user)}</h1>
       <Hello msg='Hello bro' user={user} />
       <HelloWorld /> */}
-      <Navbar dark color='primary'>
+      {/* <Navbar dark color='primary'>
         <div className='container'>
           <NavbarBrand href='/'>Ristorante Con Fusion</NavbarBrand>
         </div>
-      </Navbar>
+      </Navbar> */}
       {/* <Account /> */}
       {/* <Comment
         date={comment.date}
@@ -51,9 +55,15 @@ function App() {
       {/* <Stock /> */}
       {/* <Warning /> */}
       {/* <Form /> */}
-      <ul>
+      {/* <ul>
         {names}
-      </ul>
+      </ul> */}
+      {/* <Welcome name='Van' />
+      <Welcome name='Thuy Kieu' />
+      <Welcome name='Thuy van' /> */}
+      {/* <Garage /> */}
+      {/* <Car /> */}
+      <Menu />
     </div>
   );
 }
