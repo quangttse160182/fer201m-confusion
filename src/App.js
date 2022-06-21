@@ -1,78 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
-import Hello from './components/Hello';
-import { HelloWorld } from './components/HelloWorld';
-import { Navbar, NavbarBrand } from 'reactstrap';
-import { Comment } from './components/Comment';
-import { Account } from './components/Account';
-import { Store } from './components/Store';
-import { Stock } from './components/Stock';
-import { Warning } from './components/Warning';
-import { Form } from './components/Form';
-import { Garage } from './components/Garage';
-import { Welcome } from './components/Welcome';
-import { Car } from './components/Car';
-import { Menu } from './components/Menu';
 import { Component } from 'react';
-import { DISHES } from './shared/dishes';
-
-const comment = {
-  date: new Date(),
-  text: 'I hope you enjoy my restaurant!',
-  author: {
-    name: 'alberto',
-    avatarUrl: 'images/alberto.png',
-  },
-};
+import { COMMENTS } from './shared/comments';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import { Contact } from './components/Contact';
+import { Home } from './components/Home';
+import { NoPage } from './components/NoPage';
+import { Blogs } from './components/Blogs';
+import { Menu } from './components/Menu';
+import { Profile } from './components/Profile';
+import { Main } from './components/Main';
+import { MyForm } from './components/MyForm';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      dishes: DISHES,
-    };
   }
-  // const user = {
-  //   id: '1',
-  //   name: 'thi no',
-  // };
-  // const store = {
-  //   itemName: 'rose',
-  //   number: 1000,
-  // };
-
-  // const cities = ['Jaipur', 'Jodhpur', 'Udaipur', 'Pune', 'Chandigarh'];
-  // const names = cities.map((c) => <li>{c}</li>);
 
   render() {
     return (
       <div className='App'>
-        {/* <h1>Hello, {formatName(user)}</h1>
-      <Hello msg='Hello bro' user={user} />
-      <HelloWorld /> */}
-        {/* <Navbar dark color='primary'>
-        <div className='container'>
-          <NavbarBrand href='/'>Ristorante Con Fusion</NavbarBrand>
-        </div>
-      </Navbar> */}
-        {/* <Account /> */}
-        {/* <Comment
-        date={comment.date}
-        text={comment.text}
-        author={comment.author}
-      /> */}
-        {/* <Stock /> */}
-        {/* <Warning /> */}
-        {/* <Form /> */}
-        {/* <ul>
-        {names}
-      </ul> */}
-        {/* <Welcome name='Van' />
-      <Welcome name='Thuy Kieu' />
-      <Welcome name='Thuy van' /> */}
-        {/* <Garage /> */}
-        {/* <Car /> */}
-        <Menu dishes={this.state.dishes} />
+        {/* <BrowserRouter>
+          <div>
+            <Switch>
+              <Route path='/' exact component={Layout} />
+              <Route path='/home' component={Home} />
+              <Route path='/blogs' component={Blogs} />
+              <Route path='/contact' component={Contact} />
+              <Route path='/profile/:isLogin/:name' component={Profile} />
+              <Route path='*' component={NoPage} />
+            </Switch>
+          </div>
+        </BrowserRouter> */}
+        <Main />
+        {/* <MyForm /> */}
       </div>
     );
   }
