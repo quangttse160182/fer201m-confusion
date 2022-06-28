@@ -11,7 +11,6 @@ const RenderDish = ({ dish }) => {
         </CardBody>
       </Card>
     );
-  return <div></div>;
 };
 
 const RenderComments = ({ comments }) => {
@@ -25,7 +24,14 @@ const RenderComments = ({ comments }) => {
       </div>
     );
   });
-  return comments;
+
+  if (comments)
+    return (
+      <>
+        <h2>Comments</h2>
+        <div>{comments}</div>
+      </>
+    );
 };
 
 export const DishDetail = ({ dish }) => {
@@ -36,7 +42,6 @@ export const DishDetail = ({ dish }) => {
           <RenderDish dish={dish} />
         </div>
         <div className='col-12 col-sm-7'>
-          <h2>Comments</h2>
           <RenderComments comments={dish?.comments} />
         </div>
       </div>
