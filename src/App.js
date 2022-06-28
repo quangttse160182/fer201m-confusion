@@ -32,7 +32,9 @@ class App extends Component {
             </Switch>
           </div>
         </BrowserRouter> */}
-        <Main />
+        <BrowserRouter>
+          <Main />
+        </BrowserRouter>
         {/* <MyForm /> */}
       </div>
     );
