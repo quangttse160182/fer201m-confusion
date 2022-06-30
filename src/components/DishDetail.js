@@ -54,7 +54,7 @@ export class DishDetail extends Component {
   render() {
     const dish = this.props?.dish;
     const comments = this.props?.comments;
-    
+
     return (
       <div className='container'>
         <div className='row'>
