@@ -10,8 +10,18 @@ import {
 import { Link } from 'react-router-dom';
 
 export const About = (props) => {
-  const leaders = props.leaders.map((leader) => {
-    return <p>Leader {leader.name}</p>;
+  const leaders = props.leaders?.map((leader) => {
+    return (
+      <div className='d-flex'>
+        <div className='mr-4'>
+          <img src={leader.image} alt='Leader Image' />
+        </div>
+        <div className='ml-4'>
+          <h3>{leader.name}</h3>
+          <div>{leader.description}</div>
+        </div>
+      </div>
+    );
   });
 
   return (

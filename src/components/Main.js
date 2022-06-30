@@ -74,12 +74,12 @@ class Main extends Component {
           <Route
             exact
             path='/aboutus'
-            component={() => <About leaders={this.props.leaders} />}
+            component={() => <About leaders={this.state.leaders} />}
           />
           <Route
             exact
             path='/menu'
-            component={() => <Menu dishes={this.props.dishes} />}
+            component={() => <Menu dishes={this.state.dishes} />}
           />
           <Route exact path='/contactus' component={Contact} />
           <Route path='/menu/:dishId' component={DishWithId} />
@@ -91,4 +91,5 @@ class Main extends Component {
   }
 }
 
-export default withRouter(connect(mapStatetoProps)(Main));
+// export default withRouter(connect(mapStatetoProps)(Main));
+export default Main
